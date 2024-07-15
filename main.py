@@ -4,7 +4,7 @@ from colorama import Fore, Style
 from rich import print
 import pyfiglet
 import time
-os.system('clear')
+os.system('cls')
 title = pyfiglet.figlet_format('SP-RENAMER', font='puffy', justify="center")
 print(f'[bold magenta]{title}[/bold magenta]')
 print(f'[green]Created by [/green][bold cyan]Rednotsus[/bold cyan]')
@@ -92,6 +92,6 @@ if __name__ == "__main__":
     print(f"[green][ RENAMER ]  |  Press enter to quit...")
     input(f"    >    ")
     if input == " ":
-        os.system('clear')
+        os.system('cls')
         time.sleep(0.5)
         exit()
