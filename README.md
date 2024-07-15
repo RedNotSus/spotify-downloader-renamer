@@ -1,5 +1,8 @@
 # spotify-downloader-renamer
 
+![image](https://github.com/user-attachments/assets/a987d060-e461-4202-8661-dde3c73db346)
+
+
 ## setup:
 install dependencys
 
