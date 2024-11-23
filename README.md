@@ -9,7 +9,7 @@
 <h3 align="center">Spotify Renamer</h3>
 
   <p align="center">
-    The best way to rename your *legally* downloaded Spotify playlists!
+    The best way to rename your legally downloaded Spotify playlists!
     <br />
     <br />
     <a href="https://youtu.be/FqwN5XkyQCQ">View Demo</a>
