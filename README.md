@@ -12,7 +12,7 @@
     The best way to rename your *legally* downloaded Spotify playlists!
     <br />
     <br />
-    <a href="https://movies.ch3n.cc">View Demo</a>
+    <a href="https://youtu.be/FqwN5XkyQCQ">View Demo</a>
     ·
     <a href="https://github.com/RedNotSus/spotify-downloader-renamer/issues">Report Bug</a>
     ·
@@ -51,6 +51,8 @@
 ## About The Project
 
 After you download your files from https://spotdownloader.com/ you find out that there are so many watermarks in the file names which kinda pisses you off so you use this to remove all of them.
+
+<img src='https://cloud-hzh4sqbm3-hack-club-bot.vercel.app/0image.png'>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
