@@ -1,0 +1,5 @@
+zipfile
+colorama
+rich
+pyfiglet
+time

@@ -4,7 +4,10 @@ from colorama import Fore, Style
 from rich import print
 import pyfiglet
 import time
-os.system('cls')
+if os.name == 'nt':
+    os.system('cls')
+else:
+    os.system('clear')
 title = pyfiglet.figlet_format('SP-RENAMER', font='puffy', justify="center")
 print(f'[bold magenta]{title}[/bold magenta]')
 print(f'[green]Created by [/green][bold cyan]Rednotsus[/bold cyan]')
@@ -28,8 +31,8 @@ def detectMusic(folder_path):
 def process_music_folder(folder_path):
     try:
         for filename in os.listdir(folder_path):
-            if filename.endswith(".mp3") and "[SPOTIFY-DOWNLOADER.COM] " in filename:
-                new_filename = filename.replace("[SPOTIFY-DOWNLOADER.COM] ", "").strip()
+            if filename.endswith(".mp3") and "[SPOTDOWNLOADER.COM] " in filename:
+                new_filename = filename.replace("[SPOTDOWNLOADER.COM] ", "").strip()
                 old_path = os.path.join(folder_path, filename)
                 new_path = os.path.join(folder_path, new_filename)
                 os.rename(old_path, new_path)
@@ -40,8 +43,8 @@ def process_music_folder(folder_path):
         print(f"[bold red][ ERROR ]  |  An error occurred: {e}")
 def rename_dir(folder_path):
     try:
-        if "[SPOTIFY-DOWNLOADER.COM] " in music_folder:
-            new_folder_name = music_folder.replace("[SPOTIFY-DOWNLOADER.COM] ", "").strip()
+        if "[SPOTDOWNLOADER.COM] " in music_folder:
+            new_folder_name = music_folder.replace("[SPOTDOWNLOADER.COM] ", "").strip()
             old_path = folder_path
             new_path = os.path.join(os.path.dirname(folder_path), new_folder_name)
             os.rename(old_path, new_path)
@@ -67,10 +70,10 @@ if __name__ == "__main__":
     extract_folder = os.path.splitext(zip_file_path)[0]
     os.makedirs(extract_folder, exist_ok=True)
     extract_zip(zip_file_path, extract_folder)
-    potential_music_folders = [folder for folder in os.listdir() if os.path.isdir(folder) and "[SPOTIFY-DOWNLOADER.COM]" in folder]
-    music_folders_with_prefix = [folder for folder in potential_music_folders if "[SPOTIFY-DOWNLOADER.COM]" in folder]
+    potential_music_folders = [folder for folder in os.listdir() if os.path.isdir(folder) and "[SPOTDOWNLOADER.COM]" in folder]
+    music_folders_with_prefix = [folder for folder in potential_music_folders if "[SPOTDOWNLOADER.COM]" in folder]
     if not music_folders_with_prefix:
-        print(f'[bold red][Error]  |  No folder with the prefix "[SPOTIFY-DOWNLOADER.COM]" found in the extracted folder.')
+        print(f'[bold red][Error]  |  No folder with the prefix "[SPOT-DOWNLOADER.COM]" found in the extracted folder.')
         exit()
     music_folder = extract_folder
     print(f"[blue][ INFO ]  |  Zip found: [/blue][yellow]{music_folder}")
@@ -87,11 +90,14 @@ if __name__ == "__main__":
     time.sleep(0.5)
     print("      ")
     print(f"[green][ RENAMER ]  |  Deleted the original zip file: {zip_file_path}")
-    elapsed_time = float(time.time() - start_time)
+    elapsed_time = round(float(time.time() - start_time), 2)
     print(f"[green][ RENAMER ]  |  Done, Completed in {elapsed_time} seconds")
     print(f"[green][ RENAMER ]  |  Press enter to quit...")
     input(f"    >    ")
     if input == " ":
-        os.system('cls')
+        if os.name == 'nt':
+            os.system('cls')
+        else:
+            os.system('clear')
         time.sleep(0.5)
         exit()
